@@ -1,0 +1,12 @@
+{
+    "name": "hexlet/code",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Aliaksandr Kulba",
+            "email": "tunet000@gmail.com"
+        }
+    ],
+    "require": {}
+}

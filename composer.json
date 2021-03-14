@@ -9,8 +9,16 @@
             "email": "tunet000@gmail.com"
         }
     ],
+    "autoload": {
+        "files": [
+            "src/Cli.php"
+        ]
+    },
     "bin": [
         "bin/brain-games"
     ],
-    "require": {}
+    "require": {
+        "php": "^7.4",
+        "wp-cli/php-cli-tools": "^0.11.12"
+    }
 }

@@ -1,5 +1,6 @@
 {
     "name": "hexlet/code",
+    "description": "Brain Games",
     "type": "project",
     "license": "MIT",
     "authors": [
@@ -7,6 +8,9 @@
             "name": "Aliaksandr Kulba",
             "email": "tunet000@gmail.com"
         }
+    ],
+    "bin": [
+        "bin/brain-games"
     ],
     "require": {}
 }

@@ -1,7 +1,7 @@
 #!/usr/bin/env php
 <?php
 
-use function Brain\Games\Cli\run;
+use function Brain\Games\BrainEven\run;
 
 require_once __DIR__ . '/../src/autoload.php';
 

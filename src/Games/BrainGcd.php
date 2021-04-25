@@ -2,13 +2,12 @@
 
 namespace Brain\Games\BrainGcd;
 
-use function Brain\Games\Functions\getRandomNumber;
 use function Brain\Games\Functions\isDivisible;
 
 function gameStep(): array
 {
-    $number1 = getRandomNumber(100);
-    $number2 = getRandomNumber(100);
+    $number1 = random_int(1, 100);
+    $number2 = random_int(1, 100);
     $question = sprintf('%d %d', $number1, $number2);
     $correctAnswer = 1;
 

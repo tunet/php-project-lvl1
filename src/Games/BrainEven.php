@@ -2,12 +2,11 @@
 
 namespace Brain\Games\BrainEven;
 
-use function Brain\Games\Functions\getRandomNumber;
 use function Brain\Games\Functions\isEven;
 
 function gameStep(): array
 {
-    $randomNumber = getRandomNumber(100);
+    $randomNumber = random_int(1, 100);
     $question = (string)$randomNumber;
     $correctAnswer = isEven($randomNumber) ? 'yes' : 'no';
 

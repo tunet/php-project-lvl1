@@ -12,12 +12,15 @@
     "autoload": {
         "files": [
             "src/Cli.php",
-            "src/BrainEven.php"
+            "src/Engine.php",
+            "src/Games/BrainEven.php",
+            "src/Games/BrainCalc.php"
         ]
     },
     "bin": [
         "bin/brain-games",
-        "bin/brain-even"
+        "bin/brain-even",
+        "bin/brain-calc"
     ],
     "require": {
         "php": "^7.4",

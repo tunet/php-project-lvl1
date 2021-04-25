@@ -5,4 +5,4 @@ use function Brain\Games\Engine\run;
 
 require_once __DIR__ . '/../src/autoload.php';
 
-run('Brain\\Games\\BrainEven\\gameStep', 'Answer "yes" if the number is even, otherwise answer "no".');
+run('Brain\\Games\\BrainCalc\\gameStep', 'What is the result of the expression?');

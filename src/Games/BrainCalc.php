@@ -7,8 +7,8 @@ use function Brain\Games\Functions\getRandomNumber;
 
 function gameStep(): array
 {
-    $number1 = getRandomNumber();
-    $number2 = getRandomNumber();
+    $number1 = getRandomNumber(10);
+    $number2 = getRandomNumber(10);
     $operator = getRandomElement(['+', '-', '*']);
     $question = sprintf('%d %s %d', $number1, $operator, $number2);
 

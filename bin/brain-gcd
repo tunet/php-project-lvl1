@@ -1,0 +1,8 @@
+#!/usr/bin/env php
+<?php
+
+use function Brain\Games\Engine\run;
+
+require_once __DIR__ . '/../src/autoload.php';
+
+run('Brain\\Games\\BrainGcd\\gameStep', 'Find the greatest common divisor of given numbers.');

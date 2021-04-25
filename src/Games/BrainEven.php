@@ -7,7 +7,7 @@ use function Brain\Games\Functions\isEven;
 
 function gameStep(): array
 {
-    $randomNumber = getRandomNumber();
+    $randomNumber = getRandomNumber(100);
     $question = (string)$randomNumber;
     $correctAnswer = isEven($randomNumber) ? 'yes' : 'no';
 

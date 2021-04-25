@@ -15,13 +15,15 @@
             "src/Engine.php",
             "src/Functions.php",
             "src/Games/BrainEven.php",
-            "src/Games/BrainCalc.php"
+            "src/Games/BrainCalc.php",
+            "src/Games/BrainGcd.php"
         ]
     },
     "bin": [
         "bin/brain-games",
         "bin/brain-even",
-        "bin/brain-calc"
+        "bin/brain-calc",
+        "bin/brain-gcd"
     ],
     "require": {
         "php": "^7.4",

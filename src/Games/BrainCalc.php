@@ -6,9 +6,16 @@ function gameStep(): array
 {
     $number1 = random_int(1, 10);
     $number2 = random_int(1, 10);
-    $operator = getRandomElement(['+', '-', '*']);
+    $operator = getRandomOperator(['+', '-', '*']);
     $question = sprintf('%d %s %d', $number1, $operator, $number2);
 
+    $correctAnswer = calculate($number1, $number2, $operator);
+
+    return [$question, (string)$correctAnswer];
+}
+
+function calculate(int $number1, int $number2, string $operator): int
+{
     switch ($operator) {
         case '+':
             $correctAnswer = $number1 + $number2;
@@ -16,21 +23,23 @@ function gameStep(): array
         case '-':
             $correctAnswer = $number1 - $number2;
             break;
-        default:
+        case '*':
             $correctAnswer = $number1 * $number2;
             break;
+        default:
+            throw new \LogicException(sprintf('Operator "%s" not supported.', $operator));
     }
 
-    return [$question, (string)$correctAnswer];
+    return $correctAnswer;
 }
 
-function getRandomElement(array $elements)
+function getRandomOperator(array $operators): string
 {
-    if (empty($elements)) {
-        return null;
+    $index = array_rand($operators);
+
+    if (null === $index) {
+        throw new \RuntimeException('Не могу выбрать случайный оператор.');
     }
 
-    $index = random_int(0, count($elements) - 1);
-
-    return $elements[$index];
+    return $operators[$index];
 }

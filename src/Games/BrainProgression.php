@@ -8,7 +8,7 @@ function gameStep(): array
     $startNumber = random_int(1, 100);
     $step = random_int(1, 10);
     $progression = range($startNumber, ($length - 1) * $step + $startNumber, $step);
-    $hiddenIndex = random_int(1, $length) - 1;
+    $hiddenIndex = array_rand($progression);
     $correctAnswer = (string)$progression[$hiddenIndex];
     $progression[$hiddenIndex] = '..';
     $question = implode(' ', $progression);

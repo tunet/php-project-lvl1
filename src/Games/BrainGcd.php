@@ -1,8 +1,6 @@
 <?php
 
-namespace Brain\Games\BrainGcd;
-
-use function Brain\Games\Functions\isDivisible;
+namespace Brain\Games\Games\BrainGcd;
 
 function gameStep(): array
 {
@@ -22,4 +20,9 @@ function gameStep(): array
     }
 
     return [$question, (string)$correctAnswer];
+}
+
+function isDivisible(int $number, int $divisor): bool
+{
+    return $number % $divisor === 0;
 }

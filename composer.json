@@ -1,5 +1,5 @@
 {
-    "name": "hexlet/code",
+    "name": "tunet/php-project-lvl1",
     "description": "Brain Games",
     "type": "project",
     "license": "MIT",
@@ -13,7 +13,6 @@
         "files": [
             "src/Cli.php",
             "src/Engine.php",
-            "src/Functions.php",
             "src/Games/BrainEven.php",
             "src/Games/BrainCalc.php",
             "src/Games/BrainGcd.php",

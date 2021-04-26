@@ -5,4 +5,4 @@ use function Brain\Games\Engine\run;
 
 require_once __DIR__ . '/../src/autoload.php';
 
-run('Brain\\Games\\BrainCalc\\gameStep', 'What is the result of the expression?');
+run('Brain\\Games\\Games\\BrainCalc\\gameStep', 'What is the result of the expression?');

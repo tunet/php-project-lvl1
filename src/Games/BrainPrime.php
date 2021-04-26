@@ -1,8 +1,6 @@
 <?php
 
-namespace Brain\Games\BrainPrime;
-
-use function Brain\Games\Functions\isPrimeNumber;
+namespace Brain\Games\Games\BrainPrime;
 
 function gameStep(): array
 {
@@ -11,4 +9,19 @@ function gameStep(): array
     $correctAnswer = isPrimeNumber($randomNumber) ? 'yes' : 'no';
 
     return [$question, $correctAnswer];
+}
+
+function isPrimeNumber(int $number): bool
+{
+    if ($number < 2) {
+        return false;
+    }
+
+    for ($i = 2; $i <= $number / 2; $i++) {
+        if ($number % $i === 0) {
+            return false;
+        }
+    }
+
+    return true;
 }

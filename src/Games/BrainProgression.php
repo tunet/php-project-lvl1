@@ -1,6 +1,6 @@
 <?php
 
-namespace Brain\Games\BrainProgression;
+namespace Brain\Games\Games\BrainProgression;
 
 function gameStep(): array
 {

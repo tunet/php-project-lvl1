@@ -1,8 +1,6 @@
 <?php
 
-namespace Brain\Games\BrainCalc;
-
-use function Brain\Games\Functions\getRandomElement;
+namespace Brain\Games\Games\BrainCalc;
 
 function gameStep(): array
 {
@@ -24,4 +22,15 @@ function gameStep(): array
     }
 
     return [$question, (string)$correctAnswer];
+}
+
+function getRandomElement(array $elements)
+{
+    if (empty($elements)) {
+        return null;
+    }
+
+    $index = random_int(0, count($elements) - 1);
+
+    return $elements[$index];
 }

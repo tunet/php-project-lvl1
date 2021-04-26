@@ -1,8 +1,6 @@
 <?php
 
-namespace Brain\Games\BrainEven;
-
-use function Brain\Games\Functions\isEven;
+namespace Brain\Games\Games\BrainEven;
 
 function gameStep(): array
 {
@@ -11,4 +9,9 @@ function gameStep(): array
     $correctAnswer = isEven($randomNumber) ? 'yes' : 'no';
 
     return [$question, $correctAnswer];
+}
+
+function isEven(int $number): bool
+{
+    return $number % 2 === 0;
 }

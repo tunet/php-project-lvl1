@@ -37,6 +37,7 @@ function getRandomOperator(array $operators): string
 {
     $index = array_rand($operators);
 
+    /** @phpstan-ignore-next-line */
     if (null === $index) {
         throw new \RuntimeException('Не могу выбрать случайный оператор.');
     }

@@ -1,2 +1,5 @@
 /.idea/
 /vendor/
+/.env
+/supervisord.log
+/supervisord.pid

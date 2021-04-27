@@ -6,7 +6,10 @@
 ### Установка проекта
 
 ```bash
-composer global require tunet/php-project-lvl1
+$ git clone https://github.com/tunet/php-project-lvl1.git
+```
+```bash
+$ make install
 ```
 
 ### Описание проекта

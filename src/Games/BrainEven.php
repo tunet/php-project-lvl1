@@ -2,10 +2,10 @@
 
 namespace Brain\Games\Games\BrainEven;
 
-function gameStep(): array
+function getGameRoundData(): array
 {
     $randomNumber = random_int(1, 100);
-    $question = (string)$randomNumber;
+    $question = (string) $randomNumber;
     $correctAnswer = isEven($randomNumber) ? 'yes' : 'no';
 
     return [$question, $correctAnswer];

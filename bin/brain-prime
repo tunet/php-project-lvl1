@@ -5,4 +5,4 @@ use function Brain\Games\Engine\run;
 
 require_once __DIR__ . '/../src/autoload.php';
 
-run('Brain\\Games\\Games\\BrainPrime\\gameStep', 'Answer "yes" if given number is prime. Otherwise answer "no".');
+run('Brain\\Games\\Games\\BrainPrime\\getGameRoundData', 'Answer "yes" if given number is prime. Otherwise answer "no".');

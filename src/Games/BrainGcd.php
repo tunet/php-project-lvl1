@@ -2,7 +2,7 @@
 
 namespace Brain\Games\Games\BrainGcd;
 
-function gameStep(): array
+function getGameRoundData(): array
 {
     $number1 = random_int(1, 100);
     $number2 = random_int(1, 100);
@@ -10,7 +10,7 @@ function gameStep(): array
 
     $correctAnswer = calculateGcd($number1, $number2);
 
-    return [$question, (string)$correctAnswer];
+    return [$question, (string) $correctAnswer];
 }
 
 function isDivisible(int $number, int $divisor): bool

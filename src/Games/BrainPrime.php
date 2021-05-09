@@ -2,10 +2,10 @@
 
 namespace Brain\Games\Games\BrainPrime;
 
-function gameStep(): array
+function getGameRoundData(): array
 {
     $randomNumber = random_int(2, 100);
-    $question = (string)$randomNumber;
+    $question = (string) $randomNumber;
     $correctAnswer = isPrimeNumber($randomNumber) ? 'yes' : 'no';
 
     return [$question, $correctAnswer];

@@ -5,4 +5,4 @@ use function Brain\Games\Engine\run;
 
 require_once __DIR__ . '/../src/autoload.php';
 
-run('Brain\\Games\\Games\\BrainGcd\\gameStep', 'Find the greatest common divisor of given numbers.');
+run('Brain\\Games\\Games\\BrainGcd\\getGameRoundData', 'Find the greatest common divisor of given numbers.');

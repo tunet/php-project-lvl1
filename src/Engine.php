@@ -12,22 +12,21 @@ function run(callable $game, string $description): void
     line("Hello, %s!", $name);
     line($description);
 
-    $countQuestions = 3;
-    $correctAnswers = 0; // @todo: remove this variable
+    $questionsCount = 3;
 
-    for ($i = 0; $i < $countQuestions; $i++) {
+    for ($i = 0; $i < $questionsCount; $i++) {
         [$question, $correctAnswer] = $game();
         $answer = prompt(sprintf('Question: %s', $question));
 
         line("Your answer: %s", $answer);
         if ($answer !== $correctAnswer) {
             line("'%s' is wrong answer ;(. Correct answer was '%s'.", $answer, $correctAnswer);
-            break;
+            line("Let's try again, %s!", $name);
+
+            return;
         }
         line('Correct!');
-        $correctAnswers++;
     }
 
-    $message = $countQuestions === $correctAnswers ? "Congratulations, %s!" : "Let's try again, %s!";
-    line($message, $name);
+    line("Congratulations, %s!", $name);
 }

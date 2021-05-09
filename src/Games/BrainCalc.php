@@ -2,7 +2,7 @@
 
 namespace Brain\Games\Games\BrainCalc;
 
-function gameStep(): array
+function getGameRoundData(): array
 {
     $number1 = random_int(1, 10);
     $number2 = random_int(1, 10);
@@ -11,7 +11,7 @@ function gameStep(): array
 
     $correctAnswer = calculate($number1, $number2, $operator);
 
-    return [$question, (string)$correctAnswer];
+    return [$question, (string) $correctAnswer];
 }
 
 function calculate(int $number1, int $number2, string $operator): int

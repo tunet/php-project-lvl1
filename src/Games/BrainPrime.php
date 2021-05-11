@@ -11,6 +11,11 @@ function getGameRoundData(): array
     return [$question, $correctAnswer];
 }
 
+function getGameDescription(): string
+{
+    return 'Answer "yes" if given number is prime. Otherwise answer "no".';
+}
+
 function isPrimeNumber(int $number): bool
 {
     if ($number < 2) {

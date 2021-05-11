@@ -18,6 +18,11 @@ function isDivisible(int $number, int $divisor): bool
     return $number % $divisor === 0;
 }
 
+function getGameDescription(): string
+{
+    return 'Find the greatest common divisor of given numbers.';
+}
+
 function calculateGcd(int $number1, int $number2): int
 {
     $correctAnswer = 1;

@@ -11,6 +11,11 @@ function getGameRoundData(): array
     return [$question, $correctAnswer];
 }
 
+function getGameDescription(): string
+{
+    return 'Answer "yes" if the number is even, otherwise answer "no".';
+}
+
 function isEven(int $number): bool
 {
     return $number % 2 === 0;

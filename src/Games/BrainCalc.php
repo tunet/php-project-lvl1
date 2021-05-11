@@ -14,6 +14,11 @@ function getGameRoundData(): array
     return [$question, (string) $correctAnswer];
 }
 
+function getGameDescription(): string
+{
+    return 'What is the result of the expression?';
+}
+
 function calculate(int $number1, int $number2, string $operator): int
 {
     switch ($operator) {

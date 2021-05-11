@@ -5,17 +5,20 @@ namespace Brain\Games\Engine;
 use function cli\line;
 use function cli\prompt;
 
-function run(callable $game, string $description): void
+function run(string $game): void
 {
+    $descriptionGetter = $game . "\\getGameDescription";
+    $roundDataGetter = $game . "\\getGameRoundData";
+
     line('Welcome to the Brain Games!');
     $name = prompt('May I have your name?');
     line("Hello, %s!", $name);
-    line($description);
+    line($descriptionGetter());
 
     $questionsCount = 3;
 
     for ($i = 0; $i < $questionsCount; $i++) {
-        [$question, $correctAnswer] = $game();
+        [$question, $correctAnswer] = $roundDataGetter();
         $answer = prompt(sprintf('Question: %s', $question));
 
         line("Your answer: %s", $answer);

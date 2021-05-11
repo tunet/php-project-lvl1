@@ -15,3 +15,8 @@ function getGameRoundData(): array
 
     return [$question, $correctAnswer];
 }
+
+function getGameDescription(): string
+{
+    return 'What number is missing in the progression?';
+}

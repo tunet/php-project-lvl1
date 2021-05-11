@@ -7,7 +7,9 @@ use function cli\prompt;
 
 function run(string $game): void
 {
+    /** @var callable $descriptionGetter */
     $descriptionGetter = $game . "\\getGameDescription";
+    /** @var callable $roundDataGetter */
     $roundDataGetter = $game . "\\getGameRoundData";
 
     line('Welcome to the Brain Games!');

@@ -10,6 +10,8 @@ RUN apk update \
     && docker-php-ext-enable xdebug \
     && apk del .build-deps
 
+COPY --from=composer:2.0.11 /usr/bin/composer /usr/bin/composer
+
 ARG LINUX_USER_ID
 
 RUN addgroup --gid $LINUX_USER_ID docker \

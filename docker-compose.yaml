@@ -10,7 +10,17 @@ services:
         environment:
             XDEBUG_CONFIG: client_host=${XDEBUG_REMOTE_HOST} client_port=${XDEBUG_REMOTE_PORT}
             PHP_IDE_CONFIG: serverName=${IDE_SERVER_NAME}
+        networks:
+            - phplvl1
+        tty: true
         volumes:
             - ./docker/php/php.ini:/usr/local/etc/php/php.ini
-            - ./docker/cron/crontab:/var/spool/cron/crontabs/crontab
             - ./:/srv/app
+
+networks:
+    phplvl1:
+        driver: bridge
+        ipam:
+            driver: default
+            config:
+                - subnet: 192.168.240.0/28
